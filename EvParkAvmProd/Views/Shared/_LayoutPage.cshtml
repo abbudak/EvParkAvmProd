@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>@ViewBag.Title</title>
+    @RenderSection("head", false)
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+    <link href="~/Content/theme.css" rel="stylesheet" />
+    <script src="~/Scripts/ie-emulation-modes-warning.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script src="~/Scripts/ie8-responsive-file-warning.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Bootstrap theme</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+    <table style="width:100%;">
+        <tr>
+            <td>Logo</td>
+            <td>
+                Company Name
+            </td>
+            <td>Sign in/Sign up </td>
+        </tr>
+
+        <tr>
+            <td>@Html.ActionLink("Home", "Index", "Home")<br />@Html.ActionLink("About", "About", "Home")<br />@Html.ActionLink("Contact", "Contact", "Home")<br /></td>
+            <td>@RenderBody()</td>
+            <td>Right Sidebar</td>
+        </tr>
+
+        <tr><td>Left Footer</td><td>Middle Footer</td><td>Right Footer</td></tr>
+    </table>
+
+</body>
+</html>
